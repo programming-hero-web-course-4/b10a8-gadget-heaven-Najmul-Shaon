@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 
@@ -19,7 +19,7 @@ const NavBar = () => {
   );
 
   return (
-    <nav className="navbar ">
+    <nav className="navbar bg-primary_color rounded-t-xl">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -45,9 +45,9 @@ const NavBar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-white text-xl font-bold">
+        <Link to="/" className="btn btn-ghost text-white text-xl font-bold">
           Gadget Heaven
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>

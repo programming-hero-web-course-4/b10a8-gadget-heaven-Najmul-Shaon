@@ -2,12 +2,15 @@ import React from "react";
 import Footer from "./Footer/Footer";
 import { Outlet } from "react-router-dom";
 import Home from "../Home/Home";
+import NavBar from "./NavBar/NavBar";
 
 const Root = () => {
   return (
     <div>
-      {/* <NavBar></NavBar> */}
-      <Home></Home>
+      {/* <div className="p-2 border-2 border-[#F6F6F6] container mx-auto rounded-xl">
+        <Home></Home>
+      </div> */}
+      <NavBar></NavBar>
       <Outlet></Outlet>
       <Footer></Footer>
     </div>
