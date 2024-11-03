@@ -4,8 +4,9 @@ import Banner from "../Banner/Banner";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-indigo-600 container mx-auto rounded-xl">
       <NavBar></NavBar>
+
       <Banner></Banner>
     </div>
   );
