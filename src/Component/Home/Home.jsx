@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "../Root/NavBar/NavBar";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import Gadgets from "../Gadgets/Gadgets";
