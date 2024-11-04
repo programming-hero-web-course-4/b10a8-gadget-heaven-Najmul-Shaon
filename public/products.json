@@ -1,21 +1,21 @@
 [
   {
-    "product_id": "P001",
+    "product_id": "1",
     "product_title": "Gaming Laptop",
     "product_image": "https://i.ibb.co.com/jLm6F5W/gaming-laptop.jpg",
     "category": "Laptop",
-    "price": 1099.99,
+    "price": 1099,
     "description": "High-performance gaming laptop with a fast processor and dedicated GPU.",
     "Specification": ["Intel i7", "16GB RAM", "512GB SSD", "NVIDIA GTX 1660"],
     "availability": true,
     "rating": 4.8
   },
   {
-    "product_id": "P002",
+    "product_id": "2",
     "product_title": "Ultrabook Laptop",
     "product_image": "https://i.ibb.co.com/kGrYKsg/ultrabook.png",
     "category": "Laptop",
-    "price": 899.99,
+    "price": 899,
     "description": "Slim and lightweight laptop with long battery life and excellent portability.",
     "Specification": [
       "Intel i5",
@@ -23,15 +23,15 @@
       "256GB SSD",
       "13.3-inch Full HD display"
     ],
-    "availability": true,
+    "availability": false,
     "rating": 4.6
   },
   {
-    "product_id": "P003",
+    "product_id": "3",
     "product_title": "Business Laptop",
     "product_image": "https://i.ibb.co.com/kyrND3W/business.jpg",
     "category": "Laptop",
-    "price": 999.99,
+    "price": 999,
     "description": "Reliable business laptop with strong security features and powerful performance.",
     "Specification": [
       "Intel i7",
@@ -43,44 +43,44 @@
     "rating": 4.7
   },
   {
-    "product_id": "P004",
+    "product_id": "4",
     "product_title": "2-in-1 Convertible Laptop",
     "product_image": "https://i.ibb.co.com/sVQyFDG/04.jpg",
     "category": "Laptop",
-    "price": 849.99,
+    "price": 849,
     "description": "Versatile 2-in-1 laptop that functions as both a laptop and tablet.",
     "Specification": ["Intel i5", "8GB RAM", "256GB SSD", "360-degree hinge"],
     "availability": true,
     "rating": 4.5
   },
   {
-    "product_id": "P005",
+    "product_id": "5",
     "product_title": "Student Laptop",
     "product_image": "https://i.ibb.co.com/RDRFDSh/5.jpg",
     "category": "Laptop",
-    "price": 549.99,
+    "price": 549,
     "description": "Affordable laptop for students with reliable performance for daily tasks.",
     "Specification": ["Intel i3", "4GB RAM", "128GB SSD", "14-inch HD display"],
     "availability": true,
     "rating": 4.3
   },
   {
-    "product_id": "P006",
+    "product_id": "6",
     "product_title": "Workstation Laptop",
     "product_image": "https://i.ibb.co.com/F4gKzcx/6.jpg",
     "category": "Laptop",
-    "price": 1499.99,
+    "price": 1499,
     "description": "Powerful workstation laptop for handling demanding tasks and software.",
     "Specification": ["Intel i9", "32GB RAM", "1TB SSD", "NVIDIA RTX 3060"],
     "availability": true,
     "rating": 4.9
   },
   {
-    "product_id": "P007",
+    "product_id": "7",
     "product_title": "10-inch Tablet",
     "product_image": "https://i.ibb.co.com/cy2Nbs9/7.jpg",
     "category": "Tablet",
-    "price": 299.99,
+    "price": 299,
     "description": "Portable 10-inch tablet with high-resolution display and long battery life.",
     "Specification": [
       "10-inch Full HD",
@@ -92,11 +92,11 @@
     "rating": 4.5
   },
   {
-    "product_id": "P008",
+    "product_id": "8",
     "product_title": "Tablet Pro with Stylus",
     "product_image": "https://i.ibb.co.com/2KmWvZ3/8.jpg",
     "category": "Tablet",
-    "price": 599.99,
+    "price": 599,
     "description": "High-performance tablet with stylus support for creative and professional tasks.",
     "Specification": [
       "11-inch 2K display",
@@ -108,22 +108,22 @@
     "rating": 4.8
   },
   {
-    "product_id": "P009",
+    "product_id": "9",
     "product_title": "Wireless Mouse",
     "product_image": "https://i.ibb.co.com/MPXGGxX/9.jpg",
     "category": "Accessories",
-    "price": 29.99,
+    "price": 29,
     "description": "Ergonomic wireless mouse with adjustable DPI and long battery life.",
     "Specification": ["2.4GHz wireless", "Adjustable DPI", "USB receiver"],
     "availability": true,
     "rating": 4.6
   },
   {
-    "product_id": "P010",
+    "product_id": "10",
     "product_title": "Mechanical Keyboard",
     "product_image": "https://i.ibb.co.com/CHC07Y3/10.jpg",
     "category": "Accessories",
-    "price": 79.99,
+    "price": 79,
     "description": "Durable mechanical keyboard with customizable RGB backlighting.",
     "Specification": [
       "Mechanical switches",

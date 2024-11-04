@@ -1,23 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Gadget = ({ gadget }) => {
+  const { product_id, product_title, product_image, price } = gadget;
   return (
-    <div className="card bg-base-100 shadow-xl">
-      <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
-        />
+    <div className="card bg-white">
+      <figure className="p-5 w-3/4 mx-auto">
+        <img src={product_image} alt="Shoes" className="rounded-xl w-full" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">
-          Shoes!
-          <div className="badge badge-secondary">NEW</div>
+        <h2 className="card-title font-semibold text-2xl text-black_color">
+          {product_title}
         </h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div className="card-actions justify-end">
-          <div className="badge badge-outline">Fashion</div>
-          <div className="badge badge-outline">Products</div>
+        <p className="font-medium text-xl text-black_color/60">
+          Price: {price}
+        </p>
+        <div className="card-actions">
+          <Link to={`/${product_id}`}>
+            <button className="btn btn-outline text-primary_color rounded-3xl">
+              View Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>

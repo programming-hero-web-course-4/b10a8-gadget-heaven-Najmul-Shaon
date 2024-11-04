@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Category = () => {
   return (
-    <div className="flex flex-col gap-4 col-span-2">
+    <div className="flex flex-col gap-4 col-span-2 bg-white p-6 rounded-2xl self-start">
       <button className="btn">
         <Link>All Category</Link>
       </button>

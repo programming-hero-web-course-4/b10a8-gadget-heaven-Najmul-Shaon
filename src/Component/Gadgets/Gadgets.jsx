@@ -14,8 +14,8 @@ const Gadgets = () => {
     <>
       <div className="col-span-10">
         <div className="grid grid-cols-3 gap-6">
-          {gadgets.map((gadget) => (
-            <Gadget gadget={gadget}></Gadget>
+          {gadgets.map((gadget, i) => (
+            <Gadget gadget={gadget} key={i}></Gadget>
           ))}
         </div>
       </div>

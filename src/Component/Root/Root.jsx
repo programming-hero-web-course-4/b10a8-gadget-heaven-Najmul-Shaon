@@ -10,7 +10,9 @@ const Root = () => {
       {/* <div className="p-2 border-2 border-[#F6F6F6] container mx-auto rounded-xl">
         <Home></Home>
       </div> */}
-      <NavBar></NavBar>
+      <div className="bg-slate-100">
+        <NavBar></NavBar>
+      </div>
       <Outlet></Outlet>
       <Footer></Footer>
     </div>
