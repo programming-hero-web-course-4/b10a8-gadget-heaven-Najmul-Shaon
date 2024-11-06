@@ -5,10 +5,10 @@ const Category = ({ handleCategory }) => {
   return (
     <div className="flex flex-col gap-4 col-span-2 bg-white p-6 rounded-2xl self-start">
       <button onClick={() => handleCategory("all")} className="btn">
-        <Link>All Category</Link>
+        <Link to="/">All Category</Link>
       </button>
       <button onClick={() => handleCategory("Laptop")} className="btn">
-        <Link>Laptop</Link>
+        <Link to="/laptop">Laptop</Link>
       </button>
       <button onClick={() => handleCategory("Tablet")} className="btn">
         <Link>Tablet</Link>

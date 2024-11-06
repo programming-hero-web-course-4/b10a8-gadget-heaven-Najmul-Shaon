@@ -9,6 +9,7 @@ import Dashboard from "./Component/Dashboard/Dashboard.jsx";
 import Home from "./Component/Home/Home.jsx";
 import ViewDetails from "./Component/ViewDetails/ViewDetails.jsx";
 import Gadgets from "./Component/Gadgets/Gadgets.jsx";
+import Laptop from "./Component/Laptop/Laptop.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,8 +36,8 @@ const router = createBrowserRouter([
         loader: () => fetch("products.json"),
       },
       {
-        path: "/",
-        element: <Gadgets></Gadgets>,
+        path: "laptop",
+        element:<Laptop></Laptop>
       },
     ],
   },

@@ -1,7 +1,7 @@
 // import React, { useEffect, useState } from "react";
 import Gadget from "../Gadget/Gadget";
 
-const Gadgets = ({ filterCategory }) => {
+const Gadgets = ({ categoryData }) => {
   //   const [gadgets, setGadgets] = useState([]);
 
   //   useEffect(() => {
@@ -14,7 +14,7 @@ const Gadgets = ({ filterCategory }) => {
     <>
       <div className="col-span-10">
         <div className="grid grid-cols-3 gap-6">
-          {filterCategory.map((category, i) => (
+          {categoryData.map((category, i) => (
             <Gadget category={category} key={i}></Gadget>
           ))}
         </div>

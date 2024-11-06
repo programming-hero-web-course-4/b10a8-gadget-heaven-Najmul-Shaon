@@ -2,13 +2,12 @@ import React, { useEffect, useState } from "react";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import Gadgets from "../Gadgets/Gadgets";
-import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
   const [categoryData, SetCategoryData] = useState([]);
   const [filterCategory, SetFilterCategory] = useState([]);
 
-  const allCategoryProducts = useLoaderData();
+//   const allCategoryProducts = useLoaderData();
   //   SetFilterCategory(allCategoryProducts);
 
   useEffect(() => {
@@ -46,9 +45,9 @@ const Home = () => {
         <h3 className="font-bold text-4xl text-black_color text-center my-12">
           Explore Cutting-Edge Gadgets
         </h3>
-        <div className="grid grid-cols-12 gap-6">
+        <div className="grid grid-cols-12 gap-6 relative">
           <Category handleCategory={handleCategory}></Category>
-          <Gadgets filterCategory={filterCategory}></Gadgets>
+          <Gadgets categoryData={categoryData}></Gadgets>
         </div>
       </div>
     </div>

@@ -4,6 +4,9 @@ import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 
 const NavBar = () => {
+
+  
+
   const links = (
     <>
       <li className="font-bold text-white text-base">
@@ -53,8 +56,9 @@ const NavBar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end space-x-6">
-        <p className="text-2xl md:text-4xl bg-white p-2 md:p-3 rounded-full">
+        <p className="text-2xl md:text-4xl bg-white p-2 md:p-3 rounded-full flex">
           <IoCartOutline></IoCartOutline>
+          <span className="badge badge-info text-sm">1</span>
         </p>
         <p className="text-2xl md:text-3xl bg-white p-2 md:p-4 rounded-full">
           <FaRegHeart></FaRegHeart>

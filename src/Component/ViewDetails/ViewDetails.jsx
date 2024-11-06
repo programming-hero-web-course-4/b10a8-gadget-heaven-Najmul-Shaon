@@ -2,12 +2,17 @@ import { useLoaderData, useParams } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
+import { createContext, useState } from "react";
+
+const CartCountContext = createContext(cart);
 
 const ViewDetails = () => {
+  <CartCountContext.Provider>
+    const [cart, setCart] = useState([]);
+    </CartCountContext.Provider>;
+    const [cart, setCart] = useState([]);
   const producstDetails = useLoaderData();
   const { product_id } = useParams();
-  const productIdInt = parseInt(product_id);
-  console.log(producstDetails, product_id, productIdInt);
   const productDetails = producstDetails.find(
     (jobDetails) => jobDetails.product_id === product_id
   );
@@ -20,19 +25,24 @@ const ViewDetails = () => {
     Specification,
     rating,
   } = productDetails;
-  console.log(Math.floor(rating));
 
   const ratings = {
     size: 40,
     count: 5,
     isHalf: false,
-    // value: { rating },
-    value: `${Math.floor(rating)}`,
+    value: `${parseInt(Math.floor(rating))}`,
     activeColor: "gold",
+  };
+
+  const handleCartCount = (productDetails) => {
+    console.log(productDetails);
+    const newCart = [...cart, productDetails];
+    setCart(newCart);
   };
 
   return (
     <div className="container mx-auto bg-primary_color">
+      <h1> cart length: {cart.length}</h1>
       <div className="text-center space-y-6 mb-8">
         <h3 className="font-bold text-3xl text-white">Product Details</h3>
         <p className="font-normal text-white text-base w-7/12 mx-auto">
@@ -68,8 +78,11 @@ const ViewDetails = () => {
               Specification:
             </h4>
             <ol className="list-decimal">
-              {Specification.map((spec) => (
-                <li className="ms-6 font-normal text-black_color/80 text-lg">
+              {Specification.map((spec, i) => (
+                <li
+                  key={i}
+                  className="ms-6 font-normal text-black_color/80 text-lg"
+                >
                   {spec}
                 </li>
               ))}
@@ -82,7 +95,10 @@ const ViewDetails = () => {
               <p className="px-4 rounded-2xl py-1 bg-gray-100">{rating}</p>
             </div>
             <div className="flex items-center gap-6">
-              <button className="btn bg-primary_color rounded-3xl text-white text-lg font-bold">
+              <button
+                onClick={() => handleCartCount(productDetails)}
+                className="btn bg-primary_color rounded-3xl text-white text-lg font-bold"
+              >
                 Add to Cart
                 <span className="text-2xl text-white font-bold">
                   <IoCartOutline></IoCartOutline>
