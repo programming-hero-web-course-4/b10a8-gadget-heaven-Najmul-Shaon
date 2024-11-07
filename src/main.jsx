@@ -4,12 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Root from "./Component/Root/Root.jsx";
 import ErrorPage from "./Component/ErrorPage/ErrorPage.jsx";
+import Home from "./Component/Home/Home.jsx";
 import Statistics from "./Component/Statistics/Statistics.jsx";
 import Dashboard from "./Component/Dashboard/Dashboard.jsx";
-import Home from "./Component/Home/Home.jsx";
-import ViewDetails from "./Component/ViewDetails/ViewDetails.jsx";
-import Gadgets from "./Component/Gadgets/Gadgets.jsx";
-import Laptop from "./Component/Laptop/Laptop.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,26 +15,16 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
-        path: "statistics",
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/statistics",
         element: <Statistics></Statistics>,
       },
       {
-        path: "Dashboard",
+        path: "/dashboard",
         element: <Dashboard></Dashboard>,
-      },
-      {
-        path: "/",
-        element: <Home></Home>,
-        loader: () => fetch("products.json"),
-      },
-      {
-        path: "/:product_id",
-        element: <ViewDetails></ViewDetails>,
-        loader: () => fetch("products.json"),
-      },
-      {
-        path: "laptop",
-        element:<Laptop></Laptop>
       },
     ],
   },

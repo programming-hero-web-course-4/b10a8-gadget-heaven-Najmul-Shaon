@@ -4,12 +4,12 @@ import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
 import { createContext, useState } from "react";
 
-const CartCountContext = createContext(cart);
+// const CartCountContext = createContext(cart);
 
 const ViewDetails = () => {
-  <CartCountContext.Provider>
-    const [cart, setCart] = useState([]);
-    </CartCountContext.Provider>;
+  // <CartCountContext.Provider>
+    // const [cart, setCart] = useState([]);
+    // </CartCountContext.Provider>;
     const [cart, setCart] = useState([]);
   const producstDetails = useLoaderData();
   const { product_id } = useParams();
