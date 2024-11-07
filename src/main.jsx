@@ -7,6 +7,8 @@ import ErrorPage from "./Component/ErrorPage/ErrorPage.jsx";
 import Home from "./Component/Home/Home.jsx";
 import Statistics from "./Component/Statistics/Statistics.jsx";
 import Dashboard from "./Component/Dashboard/Dashboard.jsx";
+import Gadgets from "./Component/Gadgets/Gadgets.jsx";
+import ViewDetails from "./Component/ViewDetails/ViewDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,19 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("../category.json"),
+        children: [
+          {
+            path: "/",
+            element: <Gadgets></Gadgets>,
+            loader: () => fetch("../products.json"),
+          },
+          {
+            path: "/gadgets/:category",
+            element: <Gadgets></Gadgets>,
+            loader: () => fetch("../products.json"),
+          },
+        ],
       },
       {
         path: "/statistics",
@@ -25,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
+      },
+      {
+        path: "/:id",
+        element: <ViewDetails></ViewDetails>,
       },
     ],
   },

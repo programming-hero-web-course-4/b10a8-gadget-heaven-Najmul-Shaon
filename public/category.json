@@ -1,11 +1,14 @@
 [
   {
+    "id": 1,
     "category": "Laptop"
   },
   {
+    "id": 2,
     "category": "Tablet"
   },
   {
+    "id": 3,
     "category": "Accessories"
   }
 ]

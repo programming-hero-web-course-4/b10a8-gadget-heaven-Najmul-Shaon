@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Gadget = ({ category }) => {
-  const { product_id, product_title, product_image, price } = category;
+const Gadget = ({ gadget }) => {
+  const { product_id, product_title, product_image, price } = gadget;
   return (
-    <div className="card bg-white">
-      <figure className="p-5 w-3/4 mx-auto">
-        <img src={product_image} alt="Shoes" className="rounded-xl w-full" />
+    <div className="card bg-white border p-4">
+      <figure className="w-3/4 mx-auto">
+        <img src={product_image} alt="Shoes" className="rounded-xl w-full p-4" />
       </figure>
       <div className="card-body">
         <h2 className="card-title font-semibold text-2xl text-black_color">

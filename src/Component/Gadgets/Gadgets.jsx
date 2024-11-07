@@ -1,21 +1,29 @@
-// import React, { useEffect, useState } from "react";
+import { useLoaderData, useParams } from "react-router-dom";
 import Gadget from "../Gadget/Gadget";
+import { useEffect, useState } from "react";
 
-const Gadgets = ({ categoryData }) => {
-  //   const [gadgets, setGadgets] = useState([]);
-
-  //   useEffect(() => {
-  //     fetch("products.json")
-  //       .then((res) => res.json())
-  //       .then((data) => setGadgets(data));
-  //   }, []);
+const Gadgets = () => {
+  const { category } = useParams();
+  const gadgets = useLoaderData();
+  const [gadget, setGadget] = useState([gadgets]);
+  useEffect(() => {
+    if (category) {
+      const filetedGadget = [...gadgets].filter(
+        (gadget) => gadget.category === category
+      );
+      console.log(filetedGadget);
+      setGadget(filetedGadget);
+    } else {
+      setGadget(gadgets);
+    }
+  }, [gadgets, category]);
 
   return (
     <>
       <div className="col-span-10">
         <div className="grid grid-cols-3 gap-6">
-          {categoryData.map((category, i) => (
-            <Gadget category={category} key={i}></Gadget>
+          {gadget.map((gadget, i) => (
+            <Gadget gadget={gadget} key={i}></Gadget>
           ))}
         </div>
       </div>

@@ -1,21 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const Category = ({ handleCategory }) => {
+const Category = ({ categories }) => {
+  // const Category = ({ handleCategory }) => {
   return (
-    <div className="flex flex-col gap-4 col-span-2 bg-white p-6 rounded-2xl self-start">
-      <button onClick={() => handleCategory("all")} className="btn">
-        <Link to="/">All Category</Link>
-      </button>
-      <button onClick={() => handleCategory("Laptop")} className="btn">
-        <Link to="/laptop">Laptop</Link>
-      </button>
-      <button onClick={() => handleCategory("Tablet")} className="btn">
-        <Link>Tablet</Link>
-      </button>
-      <button onClick={() => handleCategory("Accessories")} className="btn">
-        <Link>Accessories</Link>
-      </button>
+    <div
+      role="tablist"
+      className="tabs tabs-boxed flex flex-col gap-6 items-start p-4 bg-slate-200"
+    >
+      {categories.map((category, i) => (
+        <NavLink
+          to={`/gadgets/${category.category}`}
+          key={i}
+          role="tab"
+          className={({ isActive }) =>
+            `tab btn w-36 ${isActive ? "tab-active" : ""} `
+          }
+        >
+          {category.category}
+        </NavLink>
+      ))}
     </div>
   );
 };
