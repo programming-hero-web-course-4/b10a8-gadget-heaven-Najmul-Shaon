@@ -8,7 +8,9 @@ const Root = () => {
       <div className="bg-slate-100">
         <NavBar></NavBar>
       </div>
-      <Outlet></Outlet>
+      <div className="min-h-[100vh] container mx-auto">
+        <Outlet></Outlet>
+      </div>
       <Footer></Footer>
     </div>
   );
