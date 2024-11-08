@@ -11,7 +11,6 @@ const Gadgets = () => {
       const filetedGadget = [...gadgets].filter(
         (gadget) => gadget.category === category
       );
-      console.log(filetedGadget);
       setGadget(filetedGadget);
     } else {
       setGadget(gadgets);

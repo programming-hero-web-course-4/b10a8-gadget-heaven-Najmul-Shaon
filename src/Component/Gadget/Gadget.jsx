@@ -16,7 +16,7 @@ const Gadget = ({ gadget }) => {
           Price: {price}
         </p>
         <div className="card-actions">
-          <Link to={`/${product_id}`}>
+          <Link to={`/details/${product_id}`}>
             <button className="btn btn-outline text-primary_color rounded-3xl">
               View Details
             </button>

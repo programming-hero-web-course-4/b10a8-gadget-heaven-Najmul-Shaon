@@ -3,7 +3,6 @@ import ReactStars from "react-rating-stars-component";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
 
-
 const ViewDetails = () => {
   const producstDetails = useLoaderData();
   const { product_id } = useParams();
@@ -28,15 +27,15 @@ const ViewDetails = () => {
     activeColor: "gold",
   };
 
-  const handleCartCount = (productDetails) => {
-    console.log(productDetails);
-    const newCart = [...cart, productDetails];
-    setCart(newCart);
-  };
+  // const handleCartCount = (productDetails) => {
+  //   console.log(productDetails);
+  //   const newCart = [...cart, productDetails];
+  //   setCart(newCart);
+  // };
 
   return (
     <div className="container mx-auto bg-primary_color">
-      <h1> cart length: {cart.length}</h1>
+      {/* <h1> cart length: {cart.length}</h1> */}
       <div className="text-center space-y-6 mb-8">
         <h3 className="font-bold text-3xl text-white">Product Details</h3>
         <p className="font-normal text-white text-base w-7/12 mx-auto">
@@ -89,7 +88,13 @@ const ViewDetails = () => {
               <p className="px-4 rounded-2xl py-1 bg-gray-100">{rating}</p>
             </div>
             <div className="flex items-center gap-6">
-              <button
+              <button className="btn bg-primary_color rounded-3xl text-white text-lg font-bold">
+                Add to Cart
+                <span className="text-2xl text-white font-bold">
+                  <IoCartOutline></IoCartOutline>
+                </span>
+              </button>
+              {/* <button
                 onClick={() => handleCartCount(productDetails)}
                 className="btn bg-primary_color rounded-3xl text-white text-lg font-bold"
               >
@@ -97,7 +102,7 @@ const ViewDetails = () => {
                 <span className="text-2xl text-white font-bold">
                   <IoCartOutline></IoCartOutline>
                 </span>
-              </button>
+              </button> */}
               <button
                 className="
             btn btn-outline rounded-full text-3xl"
