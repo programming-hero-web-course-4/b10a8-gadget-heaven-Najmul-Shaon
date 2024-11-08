@@ -5,7 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Sora", sans-serif;
+}
 
-body{
-  font-family: "Sora", sans-serif;  
+html {
+  overflow-y: scroll;
 }

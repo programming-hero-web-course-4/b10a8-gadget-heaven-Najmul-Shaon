@@ -1,8 +1,9 @@
 import ReactStars from "react-rating-stars-component";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
+import { addToCart, addToWish } from "../Utility/Utility";
 
-const DetailsCard = ({ productDetails }) => {
+const DetailsCard = ({ details, isInWish, setIsInWish }) => {
   const {
     product_title,
     product_image,
@@ -11,8 +12,9 @@ const DetailsCard = ({ productDetails }) => {
     availability,
     Specification,
     rating,
-  } = productDetails;
-
+  } = details;
+  //   console.log(isInCart);
+  //   console.log(Specification);
   const ratings = {
     size: 40,
     count: 5,
@@ -21,9 +23,17 @@ const DetailsCard = ({ productDetails }) => {
     activeColor: "gold",
   };
 
+  const handleAddToCart = (gadget) => {
+    addToCart(gadget);
+  };
+  const handleAddToWish = (gadget) => {
+    addToWish(gadget);
+    setIsInWish(true);
+  };
+
   return (
     <>
-      <div className="hero w-6/12 mx-auto border bg-white rounded-xl absolute top-[260px] left-[25%]">
+      <div className="hero w-6/12 mx-auto border bg-white rounded-xl absolute top-[250px] left-[25%]">
         <div className="hero-content flex-col lg:flex-row">
           <figure className="w-1/2">
             <img src={product_image} className="w-full rounded-lg border" />
@@ -68,24 +78,20 @@ const DetailsCard = ({ productDetails }) => {
               <p className="px-4 rounded-2xl py-1 bg-gray-100">{rating}</p>
             </div>
             <div className="flex items-center gap-6">
-              <button className="btn bg-primary_color rounded-3xl text-white text-lg font-bold">
-                Add to Cart
-                <span className="text-2xl text-white font-bold">
-                  <IoCartOutline></IoCartOutline>
-                </span>
-              </button>
-              {/* <button
-                onClick={() => handleCartCount(productDetails)}
+              <button
+                onClick={() => handleAddToCart(details)}
                 className="btn bg-primary_color rounded-3xl text-white text-lg font-bold"
               >
                 Add to Cart
                 <span className="text-2xl text-white font-bold">
                   <IoCartOutline></IoCartOutline>
                 </span>
-              </button> */}
+              </button>
+
               <button
-                className="
-            btn btn-outline rounded-full text-3xl"
+                disabled={isInWish}
+                onClick={() => handleAddToWish(details)}
+                className=" btn btn-outline rounded-full text-3xl"
               >
                 <FaRegHeart></FaRegHeart>
               </button>

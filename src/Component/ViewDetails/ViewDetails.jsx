@@ -1,19 +1,27 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import DetailsCard from "../DetailsCard/DetailsCard";
+import { useEffect, useState } from "react";
+import { getWishtItems } from "../Utility/Utility";
 
 const ViewDetails = () => {
   const producstDetails = useLoaderData();
   const { product_id } = useParams();
-  const productDetails = producstDetails.find(
-    (jobDetails) => jobDetails.product_id === product_id
+  // const [singleProduct, SetSingleProduct] = useState({});
+  const [isInWish, setIsInWish] = useState(false);
+  const details = producstDetails.find(
+    (singleProductDetails) => singleProductDetails.product_id === product_id
   );
+  useEffect(() => {
+    const wishItems = getWishtItems();
+    const isExist = wishItems.find((g) => g.product_id === details.product_id);
+    if (isExist) {
+      setIsInWish(true);
+    }
+  }, []);
 
-  // const handleCartCount = (productDetails) => {
-  //   console.log(productDetails);
-  //   const newCart = [...cart, productDetails];
-  //   setCart(newCart);
-  // };
+  // SetSingleProduct(details);
 
+  // console.log(details);
   return (
     <>
       <div className="container mx-auto bg-primary_color pt-8 pb-32 mb-48">
@@ -27,7 +35,11 @@ const ViewDetails = () => {
         </div>
       </div>
 
-      <DetailsCard productDetails={productDetails}></DetailsCard>
+      <DetailsCard
+        details={details}
+        isInWish={isInWish}
+        setIsInWish={setIsInWish}
+      ></DetailsCard>
     </>
   );
 };
