@@ -4,7 +4,6 @@ import { FaRegHeart } from "react-icons/fa";
 
 const NavBar = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
   const links = (
     <>
       <li
@@ -27,6 +26,13 @@ const NavBar = () => {
         } text-base`}
       >
         <NavLink to="dashboard">Dashboard</NavLink>
+      </li>
+      <li
+        className={`font-bold ${
+          pathname === "/" ? "text-white" : "text-black_color"
+        } text-base`}
+      >
+        <NavLink to="offer">Offers</NavLink>
       </li>
     </>
   );

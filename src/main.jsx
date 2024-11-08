@@ -11,6 +11,7 @@ import Gadgets from "./Component/Gadgets/Gadgets.jsx";
 import ViewDetails from "./Component/ViewDetails/ViewDetails.jsx";
 import Cart from "./Component/Cart/Cart.jsx";
 import Wishlist from "./Component/Wishlist/Wishlist.jsx";
+import Offer from "./Component/Offers/Offer.jsx";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,11 @@ const router = createBrowserRouter([
       {
         path: "/details/:product_id",
         element: <ViewDetails></ViewDetails>,
+        loader: () => fetch("../products.json"),
+      },
+      {
+        path: "/offer",
+        element: <Offer></Offer>,
         loader: () => fetch("../products.json"),
       },
     ],

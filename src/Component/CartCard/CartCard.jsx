@@ -2,7 +2,7 @@ import { TiDeleteOutline } from "react-icons/ti";
 
 const CartCard = ({ cartProduct }) => {
   const { product_image, description, price, product_title } = cartProduct;
-  console.log(cartProduct);
+
   return (
     <div className="flex justify-between p-8 bg-base-200 rounded-xl">
       <div className="flex gap-6">

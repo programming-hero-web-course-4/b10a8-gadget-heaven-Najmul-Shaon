@@ -1,8 +1,20 @@
-# React + Vite
+# Gadget Heaven
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Live Link [Click here](https://gadgetsheavenbd.netlify.app/)
 
-Currently, two official plugins are available:
+### Requirements [Click here] (https://i.ibb.co.com/fVRC00P/Batch-10-Assignment-08.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Core Concepts
+
+- useState
+- useEffect
+- useLoaderData
+- useLocation
+
+### Key features
+
+- Catrgorywies products view and buy
+- Details view of a specific product
+- Add multiple products to your cart
+- Add to wishlist of your favorite products
+- View latest offers
