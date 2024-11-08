@@ -1,25 +1,42 @@
-
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 
 const NavBar = () => {
+  const { pathname } = useLocation();
+  console.log(pathname);
   const links = (
     <>
-      <li className="font-bold text-white text-base">
+      <li
+        className={`font-bold ${
+          pathname === "/" ? "text-white" : "text-black_color"
+        } text-base`}
+      >
         <NavLink to="/">Home</NavLink>
       </li>
-      <li className="font-bold text-white text-base">
+      <li
+        className={`font-bold ${
+          pathname === "/" ? "text-white" : "text-black_color"
+        } text-base`}
+      >
         <NavLink to="statistics">Statistics</NavLink>
       </li>
-      <li className="font-bold text-white text-base">
+      <li
+        className={`font-bold ${
+          pathname === "/" ? "text-white" : "text-black_color"
+        } text-base`}
+      >
         <NavLink to="dashboard">Dashboard</NavLink>
       </li>
     </>
   );
 
   return (
-    <nav className="navbar bg-primary_color rounded-t-xl container mx-auto">
+    <nav
+      className={`navbar ${
+        pathname === "/" ? "bg-primary_color" : "bg-white"
+      } rounded-t-xl container mx-auto`}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -45,7 +62,12 @@ const NavBar = () => {
             {links}
           </ul>
         </div>
-        <Link to="/" className="btn btn-ghost text-white text-xl font-bold">
+        <Link
+          to="/"
+          className={`btn btn-ghost ${
+            pathname === "/" ? "text-white" : "text-black_color"
+          } text-xl font-bold`}
+        >
           Gadget Heaven
         </Link>
       </div>

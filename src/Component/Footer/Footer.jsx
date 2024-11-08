@@ -1,8 +1,4 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
-
 const Footer = () => {
-  const { pathname } = useLocation();
   return (
     <footer className="bg-base-200 mt-24">
       <div className="text-center space-y-6 py-8 border-b-2">
