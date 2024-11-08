@@ -2,7 +2,7 @@
 
 ### Live Link [Click here](https://gadgetsheavenbd.netlify.app/)
 
-### Requirements [Click here] (https://i.ibb.co.com/fVRC00P/Batch-10-Assignment-08.jpg)
+### Live Link [Click here](https://i.ibb.co.com/fVRC00P/Batch-10-Assignment-08.jpg)
 
 ### Core Concepts
 
