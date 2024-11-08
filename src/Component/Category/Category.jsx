@@ -14,7 +14,7 @@ const Category = ({ categories }) => {
           key={i}
           role="tab"
           className={({ isActive }) =>
-            `tab btn w-36 ${isActive ? "tab-active" : ""} `
+            `tab btn w-full ${isActive ? "tab-active" : ""} `
           }
         >
           {category.category}
