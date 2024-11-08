@@ -9,6 +9,7 @@ const Cart = () => {
   const [cartProducts, setCartProducts] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [sort, setSort] = useState(cartProducts);
+  const [maintainSort, setMaintainSort] = useState(false);
   console.log(sort);
   const [isButtonEnabled, setIsButtonEnabled] = useState(false);
   useEffect(() => {
@@ -30,6 +31,7 @@ const Cart = () => {
     console.log("sorted");
     const sorted = [...cartProducts].sort((a, b) => b.price - a.price);
     setSort(sorted);
+    setMaintainSort(true);
   };
 
   const toggleButton = () => {
@@ -38,7 +40,6 @@ const Cart = () => {
 
   const navigate = useNavigate();
   const hanleToHome = () => {
-    // setTotalPrice(0);
     localStorage.clear();
     toggleButton();
     navigate("/");
@@ -88,7 +89,7 @@ const Cart = () => {
         </div>
       </div>
       <div className="flex flex-col gap-6">
-        {sort.map((cartProduct, i) => (
+        {cartProducts.map((cartProduct, i) => (
           <CartCard key={i} cartProduct={cartProduct}></CartCard>
         ))}
       </div>
