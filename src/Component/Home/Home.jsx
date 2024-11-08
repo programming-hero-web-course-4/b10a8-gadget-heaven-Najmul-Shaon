@@ -2,11 +2,17 @@ import React from "react";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import { Outlet, useLoaderData } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const categories = useLoaderData();
   return (
     <>
+      <Helmet>
+        <title>Home</title>
+        <meta name="description" content="This is a description of my page" />
+        <meta name="keywords" content="React, Helmet, SEO" />
+      </Helmet>
       <div className="static max-h-[600px]">
         <Banner></Banner>
       </div>

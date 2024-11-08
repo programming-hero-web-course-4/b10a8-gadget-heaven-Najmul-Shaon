@@ -1,9 +1,15 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Dashboard = () => {
   return (
     <>
+      <Helmet>
+        <title>Dashboard</title>
+        <meta name="description" content="This is a description of my page" />
+        <meta name="keywords" content="React, Helmet, SEO" />
+      </Helmet>
       <div className="container mx-auto bg-primary_color py-12">
         <div className="text-center space-y-6">
           <h3 className="font-bold text-3xl text-white">Gadget Heaven</h3>

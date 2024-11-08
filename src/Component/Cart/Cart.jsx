@@ -9,6 +9,7 @@ const Cart = () => {
   const [cartProducts, setCartProducts] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [sort, setSort] = useState(cartProducts);
+  console.log(sort);
   const [isButtonEnabled, setIsButtonEnabled] = useState(false);
   useEffect(() => {
     const cartItems = getCartItems();
