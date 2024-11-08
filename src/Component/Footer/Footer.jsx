@@ -1,8 +1,11 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const { pathname } = useLocation();
+  console.log(pathname);
   return (
-    <footer className="footer bg-neutral text-neutral-content p-10">
+    <footer className="footer bg-neutral text-neutral-content p-10 mt-24">
       <nav>
         <h6 className="footer-title">Services</h6>
         <a className="link link-hover">Branding</a>
