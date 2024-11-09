@@ -13,8 +13,6 @@ const DetailsCard = ({ details, isInWish, setIsInWish }) => {
     Specification,
     rating,
   } = details;
-  //   console.log(isInCart);
-  //   console.log(Specification);
   const ratings = {
     size: 40,
     count: 5,

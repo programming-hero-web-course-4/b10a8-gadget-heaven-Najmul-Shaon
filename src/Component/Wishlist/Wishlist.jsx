@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getWishtItems } from "../Utility/Utility";
 import WishlistCard from "../WishlistCard/WishlistCard";
 

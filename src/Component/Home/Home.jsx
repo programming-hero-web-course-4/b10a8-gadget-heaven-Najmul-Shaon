@@ -1,4 +1,3 @@
-import React from "react";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
 import { Outlet, useLoaderData } from "react-router-dom";

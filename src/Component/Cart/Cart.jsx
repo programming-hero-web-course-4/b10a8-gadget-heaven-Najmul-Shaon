@@ -9,7 +9,6 @@ const Cart = () => {
   const [cartProducts, setCartProducts] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [sort, setSort] = useState(cartProducts);
-  const [maintainSort, setMaintainSort] = useState(false);
   console.log(sort);
   const [isButtonEnabled, setIsButtonEnabled] = useState(false);
   useEffect(() => {
@@ -26,12 +25,14 @@ const Cart = () => {
   useEffect(() => {
     toggleButton();
   }, []);
+  useEffect(() => {
+  setSort(cartProducts);
+}, [cartProducts]);
 
   const handleSort = () => {
     console.log("sorted");
     const sorted = [...cartProducts].sort((a, b) => b.price - a.price);
     setSort(sorted);
-    setMaintainSort(true);
   };
 
   const toggleButton = () => {
@@ -89,7 +90,7 @@ const Cart = () => {
         </div>
       </div>
       <div className="flex flex-col gap-6">
-        {cartProducts.map((cartProduct, i) => (
+        {sort.map((cartProduct, i) => (
           <CartCard key={i} cartProduct={cartProduct}></CartCard>
         ))}
       </div>

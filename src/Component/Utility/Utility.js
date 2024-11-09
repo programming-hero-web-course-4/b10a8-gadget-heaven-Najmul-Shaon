@@ -12,14 +12,9 @@ const getCartItems = () => {
 
 const addToCart = (gadet) => {
   const cartItems = getCartItems();
-  //   const isExist = cartItems.find((g) => g.product_id === gadet.product_id);
-  //   if (isExist) {
-  //     toast.error("Already Added to Your Cart!!");
-  //   } else {
   cartItems.push(gadet);
   localStorage.setItem("cart", JSON.stringify(cartItems));
   toast.success("Successfully Added to Cart!!");
-  //   }
 };
 
 // add to wishlist

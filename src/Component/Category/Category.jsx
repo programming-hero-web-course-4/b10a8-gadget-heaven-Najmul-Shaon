@@ -1,8 +1,6 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Category = ({ categories }) => {
-  // const Category = ({ handleCategory }) => {
   return (
     <div
       role="tablist"

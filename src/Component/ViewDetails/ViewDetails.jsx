@@ -19,9 +19,6 @@ const ViewDetails = () => {
     }
   }, []);
 
-  // SetSingleProduct(details);
-
-  // console.log(details);
   return (
     <>
       <div className="container mx-auto bg-primary_color pt-8 pb-32 mb-48">
